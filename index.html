@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="=ie=edge">
+        <link rel="stylesheet" href="css/pydocs.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <title>Py Docs</title>
+    </head>
+    <body>
+        <div id="container">
+            <nav id="navbar">
+               <header id="navnar-header">
+                    <h1>Python Docs</h1>
+                    </header>
+               <div id="navbar-list">
+                    <ul>
+                       <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+                       <li><a href="#The_Python_Interpreter" class="nav-link">The Python Interpreter</a></li>
+                       <li><a href="#Hello_World" class="nav-link">Hello World</a></li>
+                       <li><a href="#Variables" class="nav-link">Variables</a></li>
+                       <li><a href="#Strings" class="nav-link">Strings</a></li>
+                       <li><a href="#If_Statement" class="nav-link">If Statement</a></li>
+                       <li><a href="#Lists" class="nav-link">Lists</a></li>
+                       <li><a href="#Tuples" class="nav-link">Tuples</a></li>
+                       <li><a href="#Loops" class="nav-link">Loops</a></li>
+                       <li><a href="#While_Loop" class="nav-link">While Loop</a></li>
+                       <li><a href="#For_Loop" class="nav-link">For Loop</a></li>
+                       <li><a href="#References" class="nav-link">References</a></li>
+                    </ul>
+                </div>   
+          </nav>
+          <main id="main-doc">
+            <!-------------------------------------------1- Introduction-------------------------------------------------------->
+              <section class="main-section" id="Introduction">
+                  <header><h1>Introduction</h1></header>
+                  <p>
+                      The Python programming language is an object-oriented language, which means that it can model real-world entities.
+                      It is also dynamically-typed because it carries out type-checking at runtime. It does so to make sure that the type of 
+                      construct matches what we expect it to be. The distinctive feature of Python is that it is an interpreted language. 
+                      The Python IDLE (Integrated Development Environment) executes instructions one line at a time. 
+                  </p>
+              </section>
+               <!------------------------------------------2- The Python interpreter---------------------------------------------->
+              <section class="main-section" id="The_Python_Interpreter">
+                  <header><h1>The Python Interpreter</h1></header>
+                     <h4> Python interpreter offers some pretty cool features:</h4>
+                      <ul>
+                        <li>Interactive editing.</li>
+                        <li>History substitution.</li>
+                        <li>Code completion on systems with support for readline.</li>
+                      </ul> 
+                      <p>
+                      On Windows, when you want to run the Python interpreter in the shell, you can type the following:
+                       <code class="code-block">
+                           >>> $python<br>
+                           >>> &emsp; &emsp; # start writing  your code here
+                       </code>
+                      
+                      To get out of the interpreter in disassembling the Bytecode shell, you can type:
+                       <code class="code-block">>>> exit()</code> 
+                      </p>
+                    <h4> How Does Python Interpreter Work?</h4>
+                        <p>Well, internally, four things happen in a REPL:
+                        <ul>
+                           <li>Lexing- The lexer breaks the line of code into tokens.</li>
+                           <li>Parsing- The parser uses these tokens to generate a structure, here, an Abstract Syntax Tree,
+                                to depict the relationship between these tokens.</li>
+                           <li>Compiling- The compiler turns this AST into code object(s).</li>
+                           <li>Interpreting- The interpreter executes each code object.</li>
+                         </ul>
+                      </p>
+              </section>
+               <!------------------------------------------3- Hello World--------------------------------------------------------->
+              <section class="main-section" id="Hello_World">
+                  <header><h1>Hello World</h1></header>
+                  <p>
+                      Python is one of the languages that you don't need to write lines and lines of code just to perform
+                      simple takes. With only one line you can say 'hello' to the whole world.
+                      <code class="code-block">
+                          >>> print('Hello World')<br>
+                          Hello World &emsp; &emsp; # output
+                      </code> 
+                  </p>
+              </section>
+               <!------------------------------------------4- Variables----------------------------------------------------------->
+              <section class="main-section" id="Variables">
+                 <header><h1>Variables</h1></header>
+                   <h4>What are Python Variables?</h4>
+                   <p>A variable is a container for a value. It can be assigned a name, you can use it to refer to it later in the program. 
+                      Based on the value assigned, the interpreter decides its data type. You can always store a different type in a variable.
+                      To assign a value to Python variables, you don’t need to declare its type. You name and type the value after the equal sign(=):
+                      <code class="code-block">
+                          >>> num   =    1    &emsp; &emsp; &emsp; # an int variable <br>
+                          >>> name  =   "Cat" &emsp; &emsp;  # a string variable <br>
+                          >>> checked = True  &emsp; &emsp; # a bool variable
+                    </code>
+                   </p>
+              </section>
+               <!------------------------------------------5- Strings-------------------------------------------------------------->
+               <section class="main-section" id="Strings">
+                    <header><h1>Strings</h1></header>
+                    <p>   
+                       You can declare a Python string using either single quotes or double quotes.    
+                       <code class="code-block">
+                           >>> s1 ='This is a string inside single quotes.' <br>
+                           >>> s2 =a='This is a string inside double quotes."<br>
+                           >>> print(s1)<br>
+                           This is a string inside single quotes. &emsp; &emsp; # output<br>
+                           >>> print(s2)<br>
+                           This is a string inside double quotes. &emsp; &emsp; # output<br>
+                       </code>    
+                           
+                       Since we delimit strings using quotes, there are some things you need to take care of when using them inside a string.
+                       <code class="code-block">
+                           >>> s1 ="Someone said, "I love Python.""<br>
+                           SyntaxError: invalid syntax   &emsp; &emsp; # Error
+                       </code>
+                       If you need to use double quotes inside a Python string, delimit the string with single quotes.
+                       <code class="code-block">
+                            >>> s1 ='Someone said, "I love Python."'<br>
+                            >>> print(s1)   <br>
+                            >>> 'Someone said, "I love Python."'&emsp; &emsp; # output
+                        </code>
+                    </p>
+                       <h4> Displaying a single character</h4>
+                       <p> 
+                           To display a single character from a string, put its index in square brackets. Indexing begins at 0.
+                           <code class="code-block">    
+                               >>> s = "I love Python." <br>
+                               >>> s[0] <br> 
+                              'I' &emsp; # output <br>
+                               >>> s[4] <br>
+                               'v' &emsp; # output
+                           </code>   
+                       Sometimes, you may want to display only a part of a string. For this, use the slicing operator [].
+                       <code class="code-block"> 
+                           >>> s = "I love Python."<br>
+                           >>> s[7:] <br>
+                           "Python" &emsp; # output
+                        </code>   
+                       </p>
+                      <h4> Python String Concatenation</h4>
+                      <p>
+                         Concatenation is the operation of joining stuff together. Python Strings can join using the concatenation operator +.
+                         <code class="code-block"> 
+                            >>> a='Do you see this, ' <br>
+                            >>> b='$$?' <br>
+                            >>> a+b <br>
+                            ‘Do you see this, $$?’ &emsp; # output
+                        </code>    
+                    </p>
+                </section>
+               <!-----------------------------------------6- If Statement------------------------------------------------------>
+              <section class="main-section" id="If_Statement">
+                 <header><h1>If Statement</h1></header>
+                 <p>
+                    We’ll start by looking at the most basic type of if statement. In its simplest form, it looks like this:
+                    <code class="code-block"> 
+                       if it rains:    &emsp;# expression<br>
+                       &emsp; &emsp;stay home. &emsp;# statement
+                    </code>              
+                    <b>In the form shown above:<br></b>
+                 </p>
+                    <ul>
+                      <li> If <code class="inline-code"> [expression] </code> evaluated in Boolean contextion, <code class="inline-code"> [statement] </code> is a valid Python statement, which must be indented. </li>
+                      <li> If <code class="inline-code"> [expression] </code> is true (evaluates to a value that is “truthy”), then <code class="inline-code"> [statement] </code> is executed. </li>
+                      <li> If <code class="inline-code"> [expression] </code> is false, then <code class="inline-code"> [statement] </code> is skipped over and not executed.</li>
+                    </ul>
+                <p>  
+                    <b>Note that the colon (:) following </b><code class="inline-code"> [expression] </code> is required. Some programming languages require <code class="inline-code"> [expression] </code> to be enclosed in parentheses, but Python does not.
+                    <b>Here are several examples of this type of if statement: </b>
+                    <code class="code-block"> 
+                        >>> x = 0 <br>
+                        >>> y = 5 <br>
+                        >>> if x < y:    &emsp; &emsp;# Truthy<br> 
+                        ... &emsp; &emsp; print('yes')<br>
+                        ...<br>
+                        yes   &emsp; &emsp; # output <br>
+                        >>> <br>
+                        >>> if x > y:    &emsp; &emsp;# Falsy <br> 
+                        ... &emsp; &emsp; print('yes')<br>
+                        ...<br>
+                             &emsp; &emsp; # print statment is skipped  <br>
+                        >>>     
+                    </code>  
+    
+                 Sometimes, you want to evaluate a condition and take one path if it is true but specify an alternative path if it is not.
+                  This is accomplished with an else clause:
+                  <code class="code-block"> 
+                      if expression: <br>
+                      &emsp; &emsp; statement(s) <br>
+                      else:<br>
+                      &emsp; &emsp; statement(s) 
+                  </code>        
+                 There is also syntax for branching execution based on several alternatives. For this, use one or more 
+                 <code class="inline-code"> elif </code> (short for else if) clauses. Python evaluates each <code class="inline-code"> Expression </code>
+                  in turn and executes the suite corresponding to the first that is true.
+                 If none of the expressions are true, and an <code class="inline-code"> else </code> clause is specified, then its suite is executed:              
+                 
+                 <code class="code-block"> 
+                        >>> x = 5 <br>
+                        >>> y = 5 <br>
+                        >>> if x < y:    &emsp; &emsp;# Falsy<br> 
+                        ... &emsp; &emsp; print('yes')<br>
+                        >>> elif x > y:    &emsp; &emsp;# Falsy<br> 
+                        ... &emsp; &emsp; print('no')<br>
+                        >>> else:<br>
+                        ...&emsp; &emsp; print('x equals y')<br>
+                        'x equals y'   &emsp; &emsp; # output <br>
+                        >>>
+                 </code>      
+                </p>
+              </section>
+              <!------------------------------------------7- Lists ------------------------------------------------------------->
+              <section class="main-section" id="Lists">
+                 <header><h1>Lists</h1></header>
+                 <p>
+                    A list in Python is a collection of arbitrary objects, somewhat akin to an array in many other programming languages but more flexible. 
+                    Lists are defined in Python by enclosing a comma-separated sequence of objects in square brackets ([]), as shown below:
+                    <code class="code-block"> 
+                            >>> a = ['foo', 'bar', 'baz', 'qux']<br>
+                            >>> print(a)<br>
+                            ['foo', 'bar', 'baz', 'qux'] &emsp; &emsp; # output <br>
+                            >>> a <br>
+                            ['foo', 'bar', 'baz', 'qux'] &emsp; &emsp; # output
+                    </code>   
+                    <b>The important characteristics of Python lists are as follows:</b>
+                    <ul>
+                       <li>Lists are ordered.</li> 
+                      <code class="code-block">
+                          >>> a = ['foo', 'bar', 'baz', 'qux']<br>
+                          >>> b = ['baz', 'qux', 'bar', 'foo']<br>
+                          >>> a == b <br>
+                          False    &emsp; &emsp; # output <br>
+                          >>> a is b <br>
+                          False &emsp; &emsp; # output <br>
+                          >>> [1, 2, 3, 4] == [4, 1, 3, 2]
+                          False  &emsp; &emsp; # output
+                       </code>
+                       <li>Lists can contain any arbitrary objects.
+                           <code class="code-block">
+                                >>> a = [21.42, 'foobar', 3, 4, 'bark', False, 3.14159]<br>
+                                >>> a <br>
+                                [21.42, 'foobar', 3, 4, 'bark', False, 3.14159] &emsp; &emsp; # output
+                           </code>
+                       </li> 
+                       <li>Lists elements can be accessed by index. 
+                       <code class="code-block">
+                            >>> a = ['foo', 'bar', 'baz', 'qux', 'quux', 'corge']
+                            >>> a[0]<br>
+                            'foo' <br>
+                            >>> a[2]<br>
+                            'baz'<br>
+                            >>> a[5]<br>
+                            'corge'
+                        </code>
+                       </li>
+                       <li>Lists can be nested to arbitrary depth.
+                       <code class="code-block">
+                            >>> x = ['a', ['bb', ['ccc', 'ddd'], 'ee', 'ff'], 'g', ['hh', 'ii'], 'j'] <br>
+                            >>> x <br>
+                            ['a', ['bb', ['ccc', 'ddd'], 'ee', 'ff'], 'g', ['hh', 'ii'], 'j'] &emsp; &emsp; # output
+                        </code>
+                      </li>
+                       <li>Lists are mutable. 
+                       <code class="code-block">
+                            >>> a = ['foo', 'bar', 'baz', 'qux', 'quux', 'corge'] <br>
+                            >>> a<br>
+                            ['foo', 'bar', 'baz', 'qux', 'quux', 'corge']  &emsp; &emsp; # output <br>
+                            
+                            >>> a[2] = 10 <br>
+                            >>> a[-1] = 20 <br>
+                            >>> a<br>
+                            ['foo', 'bar', 10, 'qux', 'quux', 20]  &emsp; &emsp; # output
+                        </code>
+                      </li>
+                       <li>Lists are dynamic.
+                       <code class="code-block">
+                            >>> a = ['foo', 'bar', 'baz', 'qux', 'quux', 'corge'] <br>
+                            >>> a += ['grault', 'garply'] <br>
+                            >>> a <br>
+                            ['foo', 'bar', 'baz', 'qux', 'quux', 'corge', 'grault', 'garply']  &emsp; &emsp; # output<br>
+                            
+                            >>> a = ['foo', 'bar', 'baz', 'qux', 'quux', 'corge'] <br>
+                            
+                            >>> a = [10, 20] + a <br>
+                            >>> a <br>
+                            [10, 20, 'foo', 'bar', 'baz', 'qux', 'quux', 'corge'] &emsp; &emsp; # output
+                        </code>
+                      </li>   
+                    </ul>
+                 </p>
+              </section>
+              <!------------------------------------------8- Lists ------------------------------------------------------------->
+             <section class="main-section" id="Tuples">
+                  <header><h1>Tuples</h1></header>
+                  <p>
+                    <b>Tuples are identical to lists in all respects, except for the following properties:</b>
+                      <ul>
+                        <li> Tuples are defined by enclosing the elements in parentheses (()) instead of square brackets ([]).</li>
+                        <li>Tuples are immutable. </li>
+                      </ul>  
+                  </p>
+                  <p>  
+                  <code class="code-block">
+                        >>> t = ('foo', 'bar', 'baz', 'qux', 'quux', 'corge') <br>
+                        >>> t <br>
+                        ('foo', 'bar', 'baz', 'qux', 'quux', 'corge')
+                        
+                        >>> t[0] <br>
+                        'foo'
+                        >>> t[-1] <br>
+                        'corge'
+                        >>> t[1::2] <br>
+                        ('bar', 'qux', 'corge')
+                  </code>
+                </p>
+             </section>
+               <!-----------------------------------------9- Loops----------------------------------------------------------------->
+              <section class="main-section" id="Loops">
+                  <header><h1>Loops</h1></header>
+                  <p>
+                      When you want some statements to execute a hundred times, you don’t repeat them 100 times. 
+                      Think of when you want to print numbers 1 to 99. 
+                      Or that you want to say Hello to 99 friends. In such a case, you can use loops in python.
+                      In next sections we'll discuss two of the most import loops in python, while and for loops.
+                 </p>  
+                 </section>
+                  <!------------------------------------------10- While Loop--------------------------------------------------------------->
+                 <section class="main-section" id="While_Loop">
+                     <header><h4>While Loop</h4></header>
+                    <p>  
+                       A while loop in python iterates till its condition becomes False. In other words, it executes the statements under
+                       itself while the condition it takes is True.When the program control reaches the while loop, the condition is checked.
+                       If the condition is true, the block of code under it is executed. Remember to indent all statements under the loop 
+                       equally. After that, the condition is checked again. This continues until the condition
+                       becomes false. Then, the first statement, if any, after the loop is executed.
+                <code class="code-block">  
+                    >>> a= 3<br>
+                    >>> while(a>0):<br>
+                    ... &emsp; &emsp; print(a)<br>
+                    ... &emsp; &emsp; a-= 1<br>
+                    3    &emsp; &emsp; #output <br>
+                    2    &emsp; &emsp;<br>
+                    1    &emsp; &emsp;<br>
+                </code>  
+                  </p>
+                </section>
+                 <!------------------------------------------11- For Loop --------------------------------------------------------------->
+                <section class="main-section" id="For_Loop"> 
+                        <header><h4>For Loop</h4></header>
+                   <p>
+                        Python for loop can iterate over a sequence of items. The structure of a for loop in Python is different than that in C++ or Java.
+                         That is, <code class="inline-code"> for(int i=0; i< n;i++) </code> won’t work here. In Python, we use the <code class="inline-code">in</code> keyword.
+                       <code class="code-block">
+                            >>> a = ['foo', 'bar', 'baz']<br>
+                            >>> for i in a:<br>
+                            ...     print(i)<br>
+                            ...<br>
+                            foo    &emsp; &emsp; #output<br>
+                            bar  <br>
+                            baz
+                       </code>
+                   </p>
+                </section>   
+
+               <!------------------------------------------12- References--------------------------------------------------------------->
+              <section class="main-section" id="References">
+                  <header><h1>References</h1></header>
+                  <ul>
+                      <li><a href="https://realpython.com/learning-paths/python3-introduction/">Real Python</a></li>
+                      <li><a href="https://data-flair.training/blogs/python-tutorials-home/">Data Flair</a></li>
+                      <li><a href="https://docs.python.org/3/">Python Documentation</a></li>
+                  </ul>
+              </section>
+          </main>
+
+        </div>
+    </body>
+</html>        
